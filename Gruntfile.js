@@ -498,6 +498,7 @@ module.exports = function (grunt) {
     'copy:dist',
     'cdnify',
     'cssmin',
+    'kss',
     'uglify',
     'filerev',
     'usemin',
