@@ -16,7 +16,8 @@ module.exports = function (grunt) {
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
-    cdnify: 'grunt-google-cdn'
+    cdnify: 'grunt-google-cdn',
+    kss: 'grunt-kss'
   });
 
   // Configurable paths for the application
@@ -232,6 +233,16 @@ module.exports = function (grunt) {
                 ext: '.css'
             }]
         }
+    },
+    kss: {
+      options: {
+        css: '../../.tmp/styles/main.css',
+      },
+      dist: {
+          files: {
+            '<%= yeoman.dist %>/styleguide': ['<%= yeoman.app %>/styles/']
+          }
+      }
     },
 
     // Renames files for browser caching purposes
@@ -469,6 +480,10 @@ module.exports = function (grunt) {
     'autoprefixer',
     'connect:test',
     'karma'
+  ]);
+
+  grunt.registerTask('styleguide', [
+    'kss'
   ]);
 
   grunt.registerTask('build', [

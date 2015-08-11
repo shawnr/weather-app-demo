@@ -1,0 +1,24 @@
+// Standard Buttons
+//
+// Standard Buttons used throughout the site.
+//
+// Markup:
+// <button class="btn {{modifier_class}}">Click Me</button>
+//
+// .btn-demo        -   Demo style for button
+// .btn-outline     -   Outlined button
+// .btn-dashed      -   Dashed outline button
+//
+// Styleguide: buttons.standard
+.btn-demo {
+    background: pink;
+    color: $gray-base;
+}
+.btn-outline {
+    border: 4px solid $brand-primary;
+    background: none;
+}
+.btn-dashed {
+    border: 4px dashed $brand-primary;
+    background: none;
+}
